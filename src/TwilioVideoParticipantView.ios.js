@@ -20,7 +20,8 @@ class TwilioVideoParticipantView extends Component {
       /**
        * The participant's video track sid you want to render in the view.
        */
-      videoTrackSid: PropTypes.string.isRequired
+      videoTrackSid: PropTypes.string.isRequired,
+      scalesType: PropTypes.number,
     })
   }
 

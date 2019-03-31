@@ -15,7 +15,8 @@ class TwilioVideoLocalView extends Component {
     /**
      * Indicate if video feed is enabled.
      */
-    enabled: PropTypes.bool.isRequired
+    enabled: PropTypes.bool.isRequired,
+    scalesType: PropTypes.number,
   }
 
   render () {
