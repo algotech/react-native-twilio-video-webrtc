@@ -15,11 +15,13 @@ class TwilioVideoLocalView extends Component {
     /**
      * Indicate if video feed is enabled.
      */
-    enabled: PropTypes.bool.isRequired
+    enabled: PropTypes.bool.isRequired,
+    scalesType: PropTypes.number,
   }
 
   render () {
-    return <RCTTWLocalVideoView {...this.props}>{this.props.children}</RCTTWLocalVideoView>
+    let scalesType = this.props.scaleType === 'fit' ? 1 : 2
+    return <RCTTWLocalVideoView scalesType={scalesType} {...this.props}>{this.props.children}</RCTTWLocalVideoView>
   }
 }
 

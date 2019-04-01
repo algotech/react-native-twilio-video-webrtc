@@ -20,12 +20,14 @@ class TwilioVideoParticipantView extends Component {
       /**
        * The participant's video track sid you want to render in the view.
        */
-      videoTrackSid: PropTypes.string.isRequired
+      videoTrackSid: PropTypes.string.isRequired,
+      scalesType: PropTypes.number,
     })
   }
 
   render () {
-    return <RCTTWRemoteVideoView {...this.props}>{this.props.children}</RCTTWRemoteVideoView>
+    let scalesType = this.props.scaleType === 'fit' ? 1 : 2
+    return <RCTTWRemoteVideoView scalesType={scalesType} {...this.props}>{this.props.children}</RCTTWRemoteVideoView>
   }
 }
 
